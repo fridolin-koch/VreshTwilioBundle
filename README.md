@@ -10,7 +10,31 @@ TBD
 Installation
 ------------
 
-TBD
+Add this to your debs file
+`
+[VreshTwilioBundle]
+	git=http://github.com/Vreshware/VreshTwilioBundle.git
+    target=/bundles/Vresh/VreshTwilioBundle
+    version=origin/master
+`
+
+Register the namespace in your *app/autoload.php*
+
+`
+$loader->registerNamespaces(array(
+	...
+    'Vresh'            => __DIR__.'/../vendor/bundles',
+));
+`
+
+Add the bundle to *app/AppKernel.php*
+
+`
+$bundles = array(
+	...
+	new Vresh\TwilioBundle\VreshTwilioBundle(),
+);
+`
 
 Configuration
 -------------
