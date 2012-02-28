@@ -1,0 +1,7 @@
+parameters:
+    twilio.api.class: Vresh\TwilioBundle\Twilio\Twilio
+
+services:
+    twilio.api:
+        class: %twilio.api.class%
+        #arguments: [%twilio.sid%, %twilio.authToken%, %twilio.version%]
