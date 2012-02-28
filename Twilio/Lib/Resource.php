@@ -62,7 +62,7 @@ abstract class Resource implements DataProxy
     {
         foreach (func_get_args() as $name) {
             $constantized = ucfirst(Resource::camelize($name));
-            $type = "Rest_" . $constantized;
+            $type = 'Vresh\TwilioBundle\Twilio\Lib\Rest\\' . $constantized;
             $this->addSubresource($name, new $type($this));
         }
     }
