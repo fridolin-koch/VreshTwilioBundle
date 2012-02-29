@@ -3,7 +3,7 @@ namespace Vresh\TwilioBundle\Twilio\Lib;
 /**
  * Exception class for Twiml.
  */
-class TwimlException extends Exception {}
+class TwimlException extends \Exception {}
 
 /**
  * Twiml response generator.
