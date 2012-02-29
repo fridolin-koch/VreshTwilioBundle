@@ -27,7 +27,7 @@ class Twilio extends Resource
         'sid'       => '',
         'authToken' => '',
         'version'   => '2010-04-01',
-        'certPath'  => './twilio_ssl_certificate.crt',
+        'certPath'  => __DIR__.'/../Resources/cert/twilio_ssl_certificate.crt',
     );
     /**
      * Constructor.

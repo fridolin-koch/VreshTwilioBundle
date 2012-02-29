@@ -28,7 +28,6 @@ class Configuration
                 ->scalarNode('sid')->defaultValue('')->end()
                 ->scalarNode('authToken')->defaultValue('')->end()
                 ->scalarNode('version')->defaultValue('2010-04-01')->end()
-                ->scalarNode('certPath')->defaultValue('./twilio_ssl_certificate.crt')->end()
             ->end();
 
         return $treeBuilder->buildTree();
