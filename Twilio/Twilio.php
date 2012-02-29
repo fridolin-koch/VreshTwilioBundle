@@ -27,7 +27,6 @@ class Twilio extends Resource
         'sid'       => '',
         'authToken' => '',
         'version'   => '2010-04-01',
-        'certPath'  => __DIR__.'/../Resources/cert/twilio_ssl_certificate.crt',
     );
     /**
      * Constructor.
@@ -47,7 +46,7 @@ class Twilio extends Resource
             "https://api.twilio.com",
             array("curlopts" => array(
                 CURLOPT_USERAGENT => self::USER_AGENT,
-                CURLOPT_CAINFO => $this->defaults['certPath'],
+                CURLOPT_CAINFO => __DIR__.'/../Resources/cert/twilio_ssl_certificate.crt',
             ))
         );
         $_http->authenticate($this->defaults['sid'], $this->defaults['authToken']);
