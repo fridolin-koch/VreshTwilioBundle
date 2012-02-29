@@ -1,9 +1,8 @@
 <?php
-
 /*
 * This file is part of the VreshTwilio package.
 *
-* (c) Frido Koch aka Vreshware <https://github.com/Vreshware>
+* (c) Frido Koch <frido@vresh.net
 *
 * For the full copyright and license information, please view the LICENSE
 * file that was distributed with this source code.
