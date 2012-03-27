@@ -4,6 +4,8 @@ namespace Vresh\TwilioBundle\Twilio\Lib;
  * Exception class for Twiml.
  */
 class TwimlException extends \Exception {}
+	
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Twiml response generator.
@@ -129,4 +131,19 @@ class Twiml
             '<?xml version="1.0"?>', 
             '<?xml version="1.0" encoding="UTF-8"?>', $xml);
     }
+
+	/**
+     * Returns a symfony response with content type set to application/xml
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function getResponse()   {
+
+        $response = new Response($this->__toString());
+        //set content type to xml
+        $response->headers->set('Content-Type', 'application/xml');
+        //return response
+        return $response;
+    }
+
 }
