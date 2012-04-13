@@ -5,6 +5,7 @@ use Vresh\TwilioBundle\Twilio\Lib\Resource;
 use Vresh\TwilioBundle\Twilio\Lib\TinyHttp;
 
 use Vresh\TwilioBundle\Twilio\Lib\Rest\Accounts;
+use Vresh\TwilioBundle\Twilio\Lib\RestException;
 
 #use Vresh\TwilioBundle\Twilio\Lib\Rest\*;
 /**
