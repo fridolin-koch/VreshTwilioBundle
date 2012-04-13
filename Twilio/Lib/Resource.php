@@ -19,7 +19,7 @@ abstract class Resource implements DataProxy
     {
         $this->subresources = array();
         $this->proxy = $proxy;
-        $this->name = get_class($this);
+        $this->name = str_replace('Vresh\TwilioBundle\Twilio\Lib','',get_class($this));
         $this->init();
     }
 
