@@ -102,6 +102,7 @@ class Twilio extends Resource
      */
     public function createData($path, array $params = array())
     {
+		$path = str_replace('Vresh\TwilioBundle\Twilio\Lib\Rest','',$path);
         $path = "/$this->version/$path.json";
         $headers = array('Content-Type' => 'application/x-www-form-urlencoded');
         return empty($params)
