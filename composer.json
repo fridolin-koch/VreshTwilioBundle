@@ -1,0 +1,27 @@
+{
+    "name": "vresh/twilio-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony TwilioBundle",
+    "keywords": ["Twilio"],
+    "homepage": "https://github.com/fridolin-koch/VreshTwilioBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fridolin Koch",
+            "email": "frido@vresh.net"
+        },
+        {
+            "name": "Twilio",
+            "homepage": "https://github.com/twilio/twilio-php"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.1"
+    },
+    "autoload": {
+        "psr-0": { "Vresh\\TwilioBundle": "" }
+    },
+    "target-dir": "Vresh/TwilioBundle",
+}
