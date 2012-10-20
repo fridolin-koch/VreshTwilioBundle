@@ -23,5 +23,5 @@
     "autoload": {
         "psr-0": { "Vresh\\TwilioBundle": "" }
     },
-    "target-dir": "Vresh/TwilioBundle",
+    "target-dir": "Vresh/TwilioBundle"
 }
