@@ -33,6 +33,9 @@ class Configuration
             ->children()
             ->scalarNode('sid')->defaultValue('')->end()
             ->scalarNode('authToken')->defaultValue('')->end()
+            ->scalarNode('version')->defaultValue(null)->end()
+            ->scalarNode('httpClient')->defaultValue(null)->end()
+            ->scalarNode('retryAttempts')->defaultValue(1)->end()
             ->end();
 
         return $treeBuilder->buildTree();
