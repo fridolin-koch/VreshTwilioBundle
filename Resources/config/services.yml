@@ -2,5 +2,6 @@ parameters:
     twilio.class: Services_Twilio
 
 services:
-    vresh_twilio:
+    twilio.api:
         class: %twilio.class%
+        #arguments: []
