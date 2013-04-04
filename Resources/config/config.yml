@@ -1,5 +1,5 @@
 parameters:
-    twilio.api.class: Vresh\TwilioBundle\Twilio\Twilio
+    twilio.api.class: \Services_Twilio
 
 services:
     twilio.api:
