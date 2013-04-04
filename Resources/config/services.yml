@@ -4,4 +4,3 @@ parameters:
 services:
     twilio.api:
         class: %twilio.class%
-        #arguments: []

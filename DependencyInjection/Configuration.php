@@ -31,8 +31,8 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-            ->scalarNode('sid')->defaultValue('')->end()
-            ->scalarNode('authToken')->defaultValue('')->end()
+            ->scalarNode('sid')->isRequired()->end()
+            ->scalarNode('authToken')->isRequired()->end()
             ->scalarNode('version')->defaultValue(null)->end()
             ->scalarNode('retryAttempts')->defaultValue(1)->end()
             ->end();
