@@ -1,7 +1,6 @@
 parameters:
-    twilio.api.class: \Services_Twilio
+    twilio.class: Services_Twilio
 
 services:
-    twilio.api:
-        class: %twilio.api.class%
-        #arguments: [%twilio.sid%, %twilio.authToken%, %twilio.version%]
+    vresh_twilio:
+        class: %twilio.class%
