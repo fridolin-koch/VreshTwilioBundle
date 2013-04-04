@@ -11,13 +11,13 @@ namespace Vresh\TwilioBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-
+use Symfony\Component\Config\Definition\ConfigurationInterface;
 /**
  * Class Configuration
  *
  * @author Fridolin Koch <info@fridokoch.de>
  */
-class Configuration
+class Configuration implements ConfigurationInterface
 {
     /**
      * Generates the configuration tree.
@@ -34,7 +34,6 @@ class Configuration
             ->scalarNode('sid')->defaultValue('')->end()
             ->scalarNode('authToken')->defaultValue('')->end()
             ->scalarNode('version')->defaultValue(null)->end()
-            ->scalarNode('httpClient')->defaultValue(null)->end()
             ->scalarNode('retryAttempts')->defaultValue(1)->end()
             ->end();
 
