@@ -1,5 +1,4 @@
-Symfony2 Twilio Bundle - by Vresh.net
-=====================================
+#Symfony2 Twilio Bundle - by Fridolin Koch (Vresh.net)
 
 
 About
@@ -19,7 +18,7 @@ Add this to your `composer.json` file:
 ```
 
 
-Add the bundle to *app/AppKernel.php*
+Add the bundle to `app/AppKernel.php`
 
 ```php
 $bundles = array(
@@ -62,12 +61,13 @@ class TelephoneController extends Controller
         	'8881231234', // Text this number
         	"Hello monkey!"
         );
+        
         return new Response($message->sid);
     }
 }
+```
 
 Inside a console command:
-```
 
 ```php
 class SomeCommand extends ContainerAwareCommand
@@ -96,8 +96,7 @@ class SomeCommand extends ContainerAwareCommand
 }
 ```
 
+Copyright / License
+-------------------
 
-Copyright
----------
-
-See LICENSE
+See [LICENSE](https://github.com/fridolin-koch/VreshTwilioBundle/blob/master/LICENSE)
