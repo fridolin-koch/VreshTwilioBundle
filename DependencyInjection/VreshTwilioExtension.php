@@ -29,7 +29,7 @@ class VreshTwilioExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new YamlFileLoader($container, new FileLocator(array(__DIR__.'/../Resources/config')));
-        $loader->load('config.yml');
+        $loader->load('services.yml');
 
         $configuration = new Configuration();
         $processor = new Processor();
