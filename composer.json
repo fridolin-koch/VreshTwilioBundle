@@ -1,7 +1,7 @@
 {
     "name": "vresh/twilio-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony TwilioBundle",
+    "description": "A simple Symfony2 bundle for the official sdk provided by Twilio.",
     "keywords": ["Twilio"],
     "homepage": "https://github.com/fridolin-koch/VreshTwilioBundle",
     "license": "MIT",
