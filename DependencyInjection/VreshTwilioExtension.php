@@ -15,8 +15,17 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
 
+/**
+ * Class VreshTwilioExtension
+ *
+ * @author Fridolin Koch <info@fridokoch.de>
+ */
 class VreshTwilioExtension extends Extension
 {
+    /**
+     * @param array            $configs
+     * @param ContainerBuilder $container
+     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new YamlFileLoader($container, new FileLocator(array(__DIR__.'/../Resources/config')));
@@ -24,8 +33,8 @@ class VreshTwilioExtension extends Extension
 
         $configuration = new Configuration();
         $processor = new Processor();
-        $config = $processor->process($configuration->getConfigTree(), $configs);
+        $config = $processor->process($configuration->getConfigTreeBuilder(), $configs);
 
-        $container->getDefinition('twilio.api')->addArgument( $config );
+        $container->getDefinition('twilio.api')->addArgument($config);
     }
 }
