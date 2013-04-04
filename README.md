@@ -5,24 +5,18 @@ Symfony2 Twilio Bundle - by Vresh.net
 About
 -----
 
-TBD
+This is just a wrapper for the [official SDK](https://github.com/twilio/twilio-php) provided by [Twilio](http://www.twilio.com/).
 
 Installation
 ------------
 
-Add this to your debs file
+Add this to your `composer.json` file:
 
-	[VreshTwilioBundle]
-		git=http://github.com/Vreshware/VreshTwilioBundle.git
-		target=/bundles/Vresh/VreshTwilioBundle
-		version=origin/master
+    "require": {
+	    "vresh/twilio-bundle": "dev-master",
+    }
 
-Register the namespace in your *app/autoload.php*
 
-	$loader->registerNamespaces(array(
-		//Other namespaces
-		'Vresh'            => __DIR__.'/../vendor/bundles',
-	));
 
 
 Add the bundle to *app/AppKernel.php*
@@ -47,4 +41,4 @@ TBD
 Copyright
 ---------
 
-TBD
+See LICENSE
