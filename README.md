@@ -30,7 +30,20 @@ Add the bundle to *app/AppKernel.php*
 Configuration
 -------------
 
-TBD
+Add this to your `config.yml`:
+
+
+    vresh_twilio:
+    	#Your Account SID from www.twilio.com/user/account
+        sid: %twilio_sid%
+        #Your Auth Token from www.twilio.com/user/account
+        authToken: %twilio_auth_token%
+        
+
+And this to your `parameters.yml`:
+
+    twilio_auth_token: 'XXXXX'
+    twilio_sid: 'YYYYY'
 
 Usage
 -----
