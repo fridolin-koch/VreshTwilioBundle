@@ -12,22 +12,27 @@ namespace Vresh\TwilioBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
+/**
+ * Class Configuration
+ *
+ * @author Fridolin Koch <info@fridokoch.de>
+ */
 class Configuration
 {
     /**
-* Generates the configuration tree.
-*
-* @return \Symfony\Component\DependencyInjection\Configuration\NodeInterface
-*/
-    public function getConfigTree()
+     * Generates the configuration tree.
+     *
+     * @return \Symfony\Component\Config\Definition\NodeInterface
+     */
+    public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('twilio', 'array');
+        $rootNode = $treeBuilder->root('twilio');
+
         $rootNode
-                ->children()
-                ->scalarNode('sid')->defaultValue('')->end()
-                ->scalarNode('authToken')->defaultValue('')->end()
-                ->scalarNode('version')->defaultValue('2010-04-01')->end()
+            ->children()
+            ->scalarNode('sid')->defaultValue('')->end()
+            ->scalarNode('authToken')->defaultValue('')->end()
             ->end();
 
         return $treeBuilder->buildTree();
