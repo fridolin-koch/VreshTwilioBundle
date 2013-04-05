@@ -56,7 +56,7 @@ class TelephoneController extends Controller
     {
     	$twilio = $this->get('twilio.api');
         
-        $message = $client->account->sms_messages->create(
+        $message = $twilio->account->sms_messages->create(
         	'9991231234', // From a valid Twilio number
         	'8881231234', // Text this number
         	"Hello monkey!"
@@ -84,7 +84,7 @@ class SomeCommand extends ContainerAwareCommand
     {
         $twilio = $this->getContainer()->get('twilio.api');
         
-        $message = $client->account->sms_messages->create(
+        $message = $twilio->account->sms_messages->create(
         	'9991231234', // From a valid Twilio number
         	'8881231234', // Text this number
         	"Hello monkey!"
