@@ -1,12 +1,4 @@
 <?php
-/*
-* This file is part of the VreshTwilio package.
-*
-* (c) Frido Koch <frido@vresh.net
-*
-* For the full copyright and license information, please view the LICENSE
-* file that was distributed with this source code.
-*/
 namespace Vresh\TwilioBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -16,7 +8,10 @@ use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
 
 /**
- * Class VreshTwilioExtension
+ * This file is part of the VreshTwilioBundle.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  *
  * @author Fridolin Koch <info@fridokoch.de>
  */
@@ -39,7 +34,6 @@ class VreshTwilioExtension extends Extension
             ->addArgument($config['sid'])
             ->addArgument($config['authToken'])
             ->addArgument($config['version'])
-            ->addArgument(null)
             ->addArgument($config['retryAttempts']);
     }
 }
