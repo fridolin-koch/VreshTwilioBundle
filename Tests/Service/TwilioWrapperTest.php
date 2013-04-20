@@ -30,6 +30,6 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
         //create other instance
         $otherInstance = $twilio->createInstance('BBBB', 'CCCCC');
         //check class
-        $this->assertInstanceOf('Service_Twilio', $otherInstance);
+        $this->assertInstanceOf('\Services_Twilio', $otherInstance);
     }
 }
