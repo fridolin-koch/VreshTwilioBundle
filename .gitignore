@@ -1,3 +1,4 @@
+#Mac files
 .DS_Store
 #phpstorm
 .idea
@@ -6,3 +7,5 @@ composer.phar
 composer.lock
 
 vendor/
+
+/phpunit.xml
