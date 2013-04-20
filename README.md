@@ -1,5 +1,6 @@
 #Symfony2 Twilio Bundle - by Fridolin Koch (Vresh.net)
 
+[![Build Status](https://travis-ci.org/fridolin-koch/VreshTwilioBundle.png?branch=master)](https://travis-ci.org/fridolin-koch/VreshTwilioBundle)
 
 About
 -----
@@ -54,14 +55,18 @@ class TelephoneController extends Controller
 {
     public function callAction($me, $maybee)
     {
+        //returns an instance of Vresh\TwilioBundle\Service\TwilioWrapper
     	$twilio = $this->get('twilio.api');
-        
+
         $message = $twilio->account->sms_messages->create(
         	'9991231234', // From a valid Twilio number
         	'8881231234', // Text this number
         	"Hello monkey!"
         );
-        
+
+        //get an instance of \Service_Twilio
+        $otherInstance = $twilio->createInstance('BBBB', 'CCCCC');
+
         return new Response($message->sid);
     }
 }
@@ -82,14 +87,18 @@ class SomeCommand extends ContainerAwareCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        //returns an instance of Vresh\TwilioBundle\Service\TwilioWrapper
         $twilio = $this->getContainer()->get('twilio.api');
-        
+
         $message = $twilio->account->sms_messages->create(
         	'9991231234', // From a valid Twilio number
         	'8881231234', // Text this number
         	"Hello monkey!"
         );
-        
+
+        //get an instance of \Service_Twilio
+        $otherInstance = $twilio->createInstance('BBBB', 'CCCCC');
+
         print $message->sid;
 
     }
