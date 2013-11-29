@@ -58,11 +58,11 @@ class TelephoneController extends Controller
         //returns an instance of Vresh\TwilioBundle\Service\TwilioWrapper
     	$twilio = $this->get('twilio.api');
 
-        $message = $twilio->account->sms_messages->create(
-        	'9991231234', // From a valid Twilio number
-        	'8881231234', // Text this number
-        	"Hello monkey!"
-        );
+        $message = $twilio->account->messages->sendMessage(
+	  '+14085551234', // From a Twilio number in your account
+	  '+12125551234', // Text any number
+	  "Hello monkey!"
+	);
 
         //get an instance of \Service_Twilio
         $otherInstance = $twilio->createInstance('BBBB', 'CCCCC');
@@ -90,11 +90,11 @@ class SomeCommand extends ContainerAwareCommand
         //returns an instance of Vresh\TwilioBundle\Service\TwilioWrapper
         $twilio = $this->getContainer()->get('twilio.api');
 
-        $message = $twilio->account->sms_messages->create(
-        	'9991231234', // From a valid Twilio number
-        	'8881231234', // Text this number
-        	"Hello monkey!"
-        );
+        $message = $twilio->account->messages->sendMessage(
+	  '+14085551234', // From a Twilio number in your account
+	  '+12125551234', // Text any number
+	  "Hello monkey!"
+	);
 
         //get an instance of \Service_Twilio
         $otherInstance = $twilio->createInstance('BBBB', 'CCCCC');
