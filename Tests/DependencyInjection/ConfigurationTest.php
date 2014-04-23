@@ -17,12 +17,12 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     {
         $config = new Configuration();
         /** @var \Symfony\Component\Config\Definition\ArrayNode $node  */
-        $node = $config->getConfigTreeBuilder();
-        //check root path
-        $this->assertEquals('twilio', $node->getPath());
+        $tree = $config->getConfigTreeBuilder()->buildTree();
+        //check root name
+        $this->assertEquals('twilio', $tree->getName());
         //get child nodes and check them
         /** @var \Symfony\Component\Config\Definition\ScalarNode[] $children  */
-        $children = $node->getChildren();
+        $children = $tree->getChildren();
         //check length
         $this->assertEquals(4, count($children));
         //check if all config values are available
