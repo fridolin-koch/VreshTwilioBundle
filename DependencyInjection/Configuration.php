@@ -32,6 +32,6 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('retryAttempts')->defaultValue(1)->end()
             ->end();
 
-        return $treeBuilder->buildTree();
+        return $treeBuilder;
     }
 }
