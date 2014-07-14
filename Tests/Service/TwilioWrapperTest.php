@@ -32,4 +32,16 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
         //check class
         $this->assertInstanceOf('\Services_Twilio', $otherInstance);
     }
+
+    /**
+     * @covers \Vresh\TwilioBundle\Service\TwilioWrapper::createCapability()
+     */
+    public function testCreateCapability()
+    {
+        $twilio = new TwilioWrapper('AAAA', 'XXXX');
+        //create other instance
+        $capability = $twilio->createCapability('BBBB', 'CCCCC');
+        //check class
+        $this->assertInstanceOf('\Services_Twilio_Capability', $capability);
+    }
 }
