@@ -1,6 +1,9 @@
 parameters:
     twilio.class: Vresh\TwilioBundle\Service\TwilioWrapper
+    twilio.capability.class: Vresh\TwilioBundle\Service\TwilioCapabilityWrapper
 
 services:
     twilio.api:
         class: %twilio.class%
+    twilio.capability:
+    	class: %twilio.capability.class%

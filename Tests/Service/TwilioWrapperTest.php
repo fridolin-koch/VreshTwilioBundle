@@ -1,7 +1,8 @@
 <?php
 namespace Vresh\TwilioBundle\Tests\DependencyInjection;
 
-use Vresh\TwilioBundle\Service\TwilioWrapper;
+use Vresh\TwilioBundle\Service\TwilioWrapper,
+    Vresh\TwilioBundle\Service\TwilioCapabilityWrapper;
 
 /**
  * Test the TwilioWrapper
@@ -34,14 +35,24 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers \Vresh\TwilioBundle\Service\TwilioWrapper::createCapability()
+     * @covers \Vresh\TwilioBundle\Service\TwilioCapabilityWrapper()
      */
-    public function testCreateCapability()
+    public function testCapabilityWrapper()
     {
-        $twilio = new TwilioWrapper('AAAA', 'XXXX');
-        //create other instance
-        $capability = $twilio->createCapability('BBBB', 'CCCCC');
+        $twilio = new TwilioCapabilityWrapper('AAAA', 'XXXX');
         //check class
-        $this->assertInstanceOf('\Services_Twilio_Capability', $capability);
+        $this->assertInstanceOf('\Services_Twilio_Capability', $twilio);
+    }
+
+    /**
+     * @covers \Vresh\TwilioBundle\Service\TwilioCapabilityWrapper()::createInstnace()
+     */
+    public function testCapabilityCreateInstance()
+    {
+        $twilio = new TwilioCapabilityWrapper('AAAA', 'XXXX');
+        //create other instance
+        $otherInstance = $twilio->createInstance('BBBB', 'CCCCC');
+        //check class
+        $this->assertInstanceOf('\Services_Twilio_Capability', $otherInstance);
     }
 }
