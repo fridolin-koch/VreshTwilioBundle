@@ -37,4 +37,17 @@ class TwilioWrapper extends \Services_Twilio
         return new \Services_Twilio($sid, $token, null, $version, $retryAttempts);
     }
 
+    /**
+     * Returns a new \Services_Twilio_Capability instance from the given parameters
+     *
+     * @param      $sid
+     * @param      $token
+     *
+     * @return \Services_Twilio_Capability
+     */
+    public function createCapability($sid ,$token)
+    {
+        return new \Services_Twilio_Capability($sid, $token);
+    }
+
 }
