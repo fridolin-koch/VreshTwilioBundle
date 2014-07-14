@@ -7,7 +7,7 @@ namespace Vresh\TwilioBundle\Service;
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author Fridolin Koch <info@fridokoch.de>
+ * @author Joseph Le <hello@josephle.me>
  */
 class TwilioCapabilityWrapper extends \Services_Twilio_Capability
 {
@@ -28,7 +28,7 @@ class TwilioCapabilityWrapper extends \Services_Twilio_Capability
      *
      * @return \Services_Twilio_Capability
      */
-    public function createInstance($sid ,$token)
+    public function createInstance($sid, $token)
     {
         return new \Services_Twilio_Capability($sid, $token);
     }
