@@ -6,4 +6,4 @@ services:
     twilio.api:
         class: %twilio.class%
     twilio.capability:
-    	class: %twilio.capability.class%
+        class: %twilio.capability.class%
