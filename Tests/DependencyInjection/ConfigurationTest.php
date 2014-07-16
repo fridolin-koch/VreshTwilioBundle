@@ -1,6 +1,7 @@
 <?php
 namespace Vresh\TwilioBundle\Tests\DependencyInjection;
 
+use Symfony\Component\Yaml\Parser;
 use Vresh\TwilioBundle\DependencyInjection\Configuration;
 /**
  * Test the configuration tree
@@ -11,7 +12,7 @@ use Vresh\TwilioBundle\DependencyInjection\Configuration;
 class ConfigurationTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers \Vresh\TwilioBundle\Tests\DependencyInjection::getConfigTreeBuilder()
+     * @test
      */
     public function testGetConfigTreeBuilder()
     {
@@ -30,5 +31,23 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('authToken', $children);
         $this->assertArrayHasKey('version', $children);
         $this->assertArrayHasKey('retryAttempts', $children);
+    }
+
+    /**
+     * @test
+     */
+    public function testYamlFile()
+    {
+        $yaml = new Parser();
+        $config = $yaml->parse(file_get_contents(realpath(__DIR__ . '/../../Resources/config/services.yml')));
+        //validate config
+        $this->assertArrayHasKey('parameters', $config);
+        $this->assertArrayHasKey('services', $config);
+        $this->assertArrayHasKey('twilio.api', $config['services']);
+        $this->assertArrayHasKey('class', $config['services']['twilio.api']);
+        $this->assertArrayHasKey('twilio.capability', $config['services']);
+        $this->assertArrayHasKey('class', $config['services']['twilio.capability']);
+        $this->assertArrayHasKey(str_replace('%', '', $config['services']['twilio.capability']['class']), $config['parameters']);
+        $this->assertArrayHasKey(str_replace('%', '', $config['services']['twilio.api']['class']), $config['parameters']);
     }
 }
