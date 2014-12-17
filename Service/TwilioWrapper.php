@@ -34,7 +34,7 @@ class TwilioWrapper extends \Services_Twilio
      */
     public function createInstance($sid ,$token, $version = null, $retryAttempts = 1)
     {
-        return new \Services_Twilio($sid, $token, null, $version, $retryAttempts);
+        return new \Services_Twilio($sid, $token, $version, null, $retryAttempts);
     }
 
 }
