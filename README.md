@@ -40,7 +40,7 @@ vresh_twilio:
     #(Required) Your Auth Token from www.twilio.com/user/account
     authToken: 'YYYYYYYY'
     #(Optional, default: '2010-04-01') Twilio API version
-    version: '2008-08-01'
+    version: '2010-04-01'
     #(Optional, default: 1) Number of times to retry failed requests
     retryAttempts: 3
 ```
