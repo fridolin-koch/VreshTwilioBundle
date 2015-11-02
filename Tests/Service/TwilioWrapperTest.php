@@ -13,7 +13,7 @@ use Vresh\TwilioBundle\Service\TwilioWrapper,
 class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers \Vresh\TwilioBundle\Service\TwilioWrapper()
+     * @test
      */
     public function testTwilioWrapper()
     {
@@ -23,7 +23,7 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers \Vresh\TwilioBundle\Service\TwilioWrapper::createInstance()
+     * @test
      */
     public function testCreateInstance()
     {
@@ -35,7 +35,7 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers \Vresh\TwilioBundle\Service\TwilioCapabilityWrapper()
+     * @test
      */
     public function testCapabilityWrapper()
     {
@@ -45,7 +45,7 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @covers \Vresh\TwilioBundle\Service\TwilioCapabilityWrapper()::createInstnace()
+     * @test
      */
     public function testCapabilityCreateInstance()
     {
