@@ -45,9 +45,14 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('services', $config);
         $this->assertArrayHasKey('twilio.api', $config['services']);
         $this->assertArrayHasKey('class', $config['services']['twilio.api']);
+        // capability test
         $this->assertArrayHasKey('twilio.capability', $config['services']);
         $this->assertArrayHasKey('class', $config['services']['twilio.capability']);
         $this->assertArrayHasKey(str_replace('%', '', $config['services']['twilio.capability']['class']), $config['parameters']);
         $this->assertArrayHasKey(str_replace('%', '', $config['services']['twilio.api']['class']), $config['parameters']);
+        // lookups
+        $this->assertArrayHasKey('twilio.lookups', $config['services']);
+        $this->assertArrayHasKey('class', $config['services']['twilio.lookups']);
+        $this->assertArrayHasKey(str_replace('%', '', $config['services']['twilio.lookups']['class']), $config['parameters']);
     }
 }

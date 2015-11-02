@@ -36,5 +36,8 @@ class VreshTwilioExtension extends Extension
         $container->getDefinition('twilio.capability')
             ->addArgument($config['sid'])
             ->addArgument($config['authToken']);
+        $container->getDefinition('twilio.lookups')
+            ->addArgument($config['sid'])
+            ->addArgument($config['authToken']);
     }
 }

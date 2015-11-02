@@ -1,6 +1,7 @@
 <?php
 namespace Vresh\TwilioBundle\Tests\DependencyInjection;
 
+use Vresh\TwilioBundle\Service\TwilioLookupsWrapper;
 use Vresh\TwilioBundle\Service\TwilioWrapper,
     Vresh\TwilioBundle\Service\TwilioCapabilityWrapper;
 
@@ -54,5 +55,15 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
         $otherInstance = $twilio->createInstance('BBBB', 'CCCCC');
         //check class
         $this->assertInstanceOf('\Services_Twilio_Capability', $otherInstance);
+    }
+
+    /**
+     * @test
+     */
+    public function testLookupsWrapper()
+    {
+        $twilio = new TwilioLookupsWrapper('AAAA', 'XXXX');
+        //check class
+        $this->assertInstanceOf('\Lookups_Services_Twilio', $twilio);
     }
 }
