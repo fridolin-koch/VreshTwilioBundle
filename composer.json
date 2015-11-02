@@ -1,28 +1,33 @@
 {
-    "name": "vresh/twilio-bundle",
-    "type": "symfony-bundle",
-    "description": "A simple Symfony2 bundle for the official sdk provided by Twilio.",
-    "keywords": ["Twilio"],
-    "homepage": "https://github.com/fridolin-koch/VreshTwilioBundle",
-    "license": "MIT",
-    "version": "0.4.3",
-    "authors": [
-        {
-            "name": "Fridolin Koch",
-            "email": "info@fridokoch.de"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=5.3.2",
-        "symfony/framework-bundle": ">=2.1",
-        "twilio/sdk": ">=3.10.0"
-    },
-    "require-dev": {
-      "phpunit/phpunit": "~4.1"
-    },
-    "autoload": {
-        "psr-0": { "Vresh\\TwilioBundle": "" }
-    },
-    "target-dir": "Vresh/TwilioBundle"
+  "name": "vresh/twilio-bundle",
+  "type": "symfony-bundle",
+  "description": "A simple Symfony2 bundle for the official sdk provided by Twilio.",
+  "keywords": [
+    "Twilio"
+  ],
+  "homepage": "https://github.com/fridolin-koch/VreshTwilioBundle",
+  "license": "MIT",
+  "version": "0.4.3",
+  "authors": [
+    {
+      "name": "Fridolin Koch",
+      "email": "info@fridokoch.de"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.2",
+    "symfony/framework-bundle": ">=2.1",
+    "twilio/sdk": ">=3.10.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.1",
+    "satooshi/php-coveralls": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "Vresh\\TwilioBundle": ""
+    }
+  },
+  "target-dir": "Vresh/TwilioBundle"
 }

@@ -7,3 +7,10 @@ php:
 before_script:
     - curl -s http://getcomposer.org/installer | php
     - php composer.phar install --dev
+
+script:
+  - mkdir -p build/logs
+  - php vendor/bin/phpunit -c phpunit.xml.dist
+
+after_success:
+  - php vendor/bin/coveralls -v
