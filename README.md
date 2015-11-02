@@ -1,4 +1,4 @@
-#Symfony2 Twilio Bundle - by Fridolin Koch (Vresh.net)
+#Symfony2 Twilio Bundle - by [Fridolin Koch](http://fkse.io)
 
 [![Build Status](https://travis-ci.org/fridolin-koch/VreshTwilioBundle.png?branch=master)](https://travis-ci.org/fridolin-koch/VreshTwilioBundle)
 
@@ -49,8 +49,18 @@ vresh_twilio:
     retryAttempts: 3
 ```
 
+
 Usage
 -----
+
+Provided services:
+
+| Service             | Class                         |
+|---------------------|-------------------------------|
+| `twilio.api`        | `\Services_Twilio`            |
+| `twilio.capability` | `\Services_Twilio_Capability` |
+| `twilio.lookups`    | `\Lookups_Services_Twilio`    |
+
 
 Inside a controller:
 
