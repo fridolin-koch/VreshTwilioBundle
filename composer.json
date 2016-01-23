@@ -25,9 +25,8 @@
     "satooshi/php-coveralls": "dev-master"
   },
   "autoload": {
-    "psr-0": {
-      "Vresh\\TwilioBundle": ""
+    "psr-4": {
+      "Vresh\\TwilioBundle\\": ""
     }
-  },
-  "target-dir": "Vresh/TwilioBundle"
+  }
 }
