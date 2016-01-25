@@ -22,12 +22,11 @@
   },
   "require-dev": {
     "phpunit/phpunit": "~4.1",
-    "satooshi/php-coveralls": "dev-master"
+    "satooshi/php-coveralls": "~1.0"
   },
   "autoload": {
-    "psr-0": {
-      "Vresh\\TwilioBundle": ""
+    "psr-4": {
+      "Vresh\\TwilioBundle\\": ""
     }
-  },
-  "target-dir": "Vresh/TwilioBundle"
+  }
 }
