@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/fridolin-koch/VreshTwilioBundle.png?branch=master)](https://travis-ci.org/fridolin-koch/VreshTwilioBundle)
 
-[![Coverage Status](https://coveralls.io/repos/fridolin-koch/VreshTwilioBundle/badge.svg?branch=master&service=github)](https://coveralls.io/github/fridolin-koch/VreshTwilioBundle?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/fridolin-koch/VreshTwilioBundle/badge.svg?branch=master)](https://coveralls.io/github/fridolin-koch/VreshTwilioBundle?branch=master)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fridolin-koch/VreshTwilioBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fridolin-koch/VreshTwilioBundle/?branch=master)
 
