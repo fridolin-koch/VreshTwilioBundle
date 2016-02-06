@@ -1,17 +1,43 @@
 language: php
+
 sudo: false
+
 php:
   - 5.3
+  - 5.4
   - 5.5
   - 5.6
+  - 7.0
+  - hhvm
 
-before_script:
-    - curl -s http://getcomposer.org/installer | php
-    - php composer.phar install --dev
+matrix:
+  fast_finish: true
+  include:
+    - php: 5.3
+      env: COMPOSER_FLAGS="--prefer-lowest"
+    - php: 5.6
+      env: SYMFONY_VERSION=2.3.*
+    - php: 5.6
+      env: SYMFONY_VERSION=2.7.*
+    - php: 5.6
+      env: SYMFONY_VERSION=2.8.*
+    - php: 5.6
+      env: SYMFONY_VERSION=3.0.*
+  allow_failures:
+    - php: hhvm
 
-script:
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - composer selfupdate
+  - if [ "$SYMFONY_VERSION" != "" ]; then composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update; fi;
   - mkdir -p build/logs
-  - php vendor/bin/phpunit -c phpunit.xml.dist
+
+install: composer update --prefer-source --no-interaction $COMPOSER_FLAGS
+
+script: phpunit --coverage-text
 
 after_success:
   - php vendor/bin/coveralls -v
