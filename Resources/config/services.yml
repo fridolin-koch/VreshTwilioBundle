@@ -5,8 +5,8 @@ parameters:
 
 services:
     twilio.api:
-        class: %twilio.class%
+        class: '%twilio.class%'
     twilio.capability:
-        class: %twilio.capability.class%
+        class: '%twilio.capability.class%'
     twilio.lookups:
-        class: %twilio.lookups.class%
+        class: '%twilio.lookups.class%'
