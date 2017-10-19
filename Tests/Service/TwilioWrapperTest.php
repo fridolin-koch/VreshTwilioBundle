@@ -1,21 +1,18 @@
 <?php
+
 namespace Vresh\TwilioBundle\Tests\DependencyInjection;
 
 use Vresh\TwilioBundle\Service\TwilioLookupsWrapper;
-use Vresh\TwilioBundle\Service\TwilioWrapper,
-    Vresh\TwilioBundle\Service\TwilioCapabilityWrapper;
+use Vresh\TwilioBundle\Service\TwilioWrapper;
+use Vresh\TwilioBundle\Service\TwilioCapabilityWrapper;
 
 /**
- * Test the TwilioWrapper
+ * Test the TwilioWrapper.
  *
  * @author Fridolin Koch <info@fridokoch.de>
- *
  */
 class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @test
-     */
     public function testTwilioWrapper()
     {
         $twilio = new TwilioWrapper('AAAA', 'XXXX');
@@ -23,9 +20,6 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Vresh\TwilioBundle\Service\TwilioWrapper', $twilio);
     }
 
-    /**
-     * @test
-     */
     public function testCreateInstance()
     {
         $twilio = new TwilioWrapper('AAAA', 'XXXX');
@@ -35,9 +29,6 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Services_Twilio', $otherInstance);
     }
 
-    /**
-     * @test
-     */
     public function testCapabilityWrapper()
     {
         $twilio = new TwilioCapabilityWrapper('AAAA', 'XXXX');
@@ -45,9 +36,6 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Services_Twilio_Capability', $twilio);
     }
 
-    /**
-     * @test
-     */
     public function testCapabilityCreateInstance()
     {
         $twilio = new TwilioCapabilityWrapper('AAAA', 'XXXX');
@@ -57,9 +45,6 @@ class TwilioWrapperTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Services_Twilio_Capability', $otherInstance);
     }
 
-    /**
-     * @test
-     */
     public function testLookupsWrapper()
     {
         $twilio = new TwilioLookupsWrapper('AAAA', 'XXXX');
