@@ -1,4 +1,5 @@
 <?php
+
 namespace Vresh\TwilioBundle\Service;
 
 /**
@@ -12,15 +13,6 @@ namespace Vresh\TwilioBundle\Service;
 class TwilioCapabilityWrapper extends \Services_Twilio_Capability
 {
     /**
-     * @param string $sid
-     * @param string $token
-     */
-    public function __construct($sid, $token)
-    {
-        parent::__construct($sid, $token);
-    }
-
-    /**
      * Returns a new \Services_Twilio_Capability instance from the given parameters
      *
      * @param      $sid
@@ -32,5 +24,4 @@ class TwilioCapabilityWrapper extends \Services_Twilio_Capability
     {
         return new \Services_Twilio_Capability($sid, $token);
     }
-
 }
